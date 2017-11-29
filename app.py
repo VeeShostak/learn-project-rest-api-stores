@@ -20,9 +20,9 @@ api = Api(app)
 # SqlAlchemy can create db for us
 # Use flask decorator 
 # before first request run: app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' unless it alread exists
-@app.before_first_request
-def create_tables():
-    db.create_all() # only creates tables that it sees
+# @app.before_first_request
+# def create_tables():
+#     db.create_all() # only creates tables that it sees
 
 jwt = JWT(app, authenticate, identity)  # /auth
 
